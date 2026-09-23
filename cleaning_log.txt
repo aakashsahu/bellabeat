@@ -1,0 +1,18 @@
+Loaded dailyActivity_merged: 940 rows, 33 unique users
+Loaded hourlyCalories/Intensities/Steps: 22099 rows each
+Loaded sleepDay_merged: 413 rows, 24 unique users
+Loaded weightLogInfo_merged: 67 rows, 8 unique users
+dailyActivity: dropped 0 exact duplicate rows
+dailyActivity: removing 4 rows with 0 steps AND 0 calories (tracker not worn)
+dailyActivity: removed 0 rows with negative Calories/Steps
+daily_activity table written: 936 rows
+hourly_activity: merged Calories+Intensities+Steps, dropped 0 duplicate (Id, Hour) rows
+hourly_activity table written: 22099 rows
+sleepDay: dropped 3 exact duplicate rows
+sleepDay: collapsed multiple same-day sleep records down to 1/day where present (0 secondary nap records set aside)
+sleep_day table written: 410 rows, 24 unique users (only 24/33 users logged sleep at all)
+weightLogInfo: 'Fat' column is 97% missing - left as NULL, not imputed
+weight_log table written: 67 rows, 8 unique users (only 8/33 users logged weight at all)
+daily_joined table created: LEFT JOIN of daily_activity + sleep_day + weight_log on (Id, Date)
+minuteSleep (188521 rows) summarized into sleep-state minute counts only
+heartrate_seconds (2483658 rows, 14 users with HR data) aggregated to avg heart rate per user per hour-of-day
