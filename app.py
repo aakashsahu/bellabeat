@@ -1,7 +1,7 @@
 """
 app.py
 ------
-Bellabeat / Fitbit Fitness Data Analytics - Streamlit Dashboard
+Strava-fitness / Fitbit Fitness Data Analytics - Streamlit Dashboard
 
 Run with:
     streamlit run app.py
@@ -19,7 +19,7 @@ import streamlit as st
 # ---------------------------------------------------------------------------
 # Page config & styling
 # ---------------------------------------------------------------------------
-st.set_page_config(page_title="Bellabeat Fitness Analytics", layout="wide", page_icon="📊")
+st.set_page_config(page_title="Strava-fitness Analytics", layout="wide", page_icon="📊")
 sns.set_style("whitegrid")
 sns.set_palette("Set2")
 
@@ -43,7 +43,7 @@ WEEKDAY_ORDER = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturd
 # ---------------------------------------------------------------------------
 # Sidebar navigation
 # ---------------------------------------------------------------------------
-st.sidebar.title("📊 Bellabeat Analytics")
+st.sidebar.title("📊 Strava-fitness Analytics")
 page = st.sidebar.radio(
     "Go to",
     [
@@ -68,7 +68,7 @@ st.sidebar.caption(
 # OVERVIEW
 # ---------------------------------------------------------------------------
 if page == "Overview":
-    st.title("Bellabeat: How Are Smart Device Users Behaving?")
+    st.title("Strava-fitness: How Are Smart Device Users Behaving?")
     st.markdown(
         """
         **Business task:** Analyze smart-device fitness data to uncover usage trends that can
